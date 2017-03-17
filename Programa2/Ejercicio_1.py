@@ -1,5 +1,6 @@
 from Clases.Alumno import Alumno
 from datetime import date
+from Clases.Materias import Materias
 
 a= Alumno()
 
@@ -14,4 +15,11 @@ a.addNota(5)
 a.addNota(9)
 
 print(a.promedio())
+
+mate = Materias()
+
+mate.setMateria("Matematica")
+mate.agregarNota(6)
+
+a.listamaterias = mate
 

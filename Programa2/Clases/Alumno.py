@@ -1,5 +1,7 @@
 from datetime import date
 
+from .Materias import Materias
+
 
 class Alumno(object):
     nombre = ""
@@ -8,7 +10,14 @@ class Alumno(object):
 
     fecha = None
 
-    listanotas = []
+    m = Materias()
+
+    listamaterias = []
+
+    def setMateria(self, n):
+        (self.materias).append(n)
+
+    def setPromediox(self, ):
 
     def setNombre(self, n):
         self.nombre = str(n)
@@ -18,9 +27,6 @@ class Alumno(object):
 
     def setFecha(self, a, b, c):
         self.fecha = date(int(a), int(b), int(c))
-
-    def addNota(self, nota):
-        self.listanotas.append(nota)
 
     def minNota(self):
         return min(self.listanotas)
